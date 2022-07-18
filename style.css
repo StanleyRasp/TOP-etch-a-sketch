@@ -1,0 +1,190 @@
+html{
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper > .title{
+    font-size: 8vh;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-align: center;
+}
+
+.working-area{
+    margin-top: 2vh;
+    display: flex;
+    align-items: stretch;
+    column-gap: 1%;
+}
+
+.menu{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 1) inset;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 3%;
+
+}
+
+.color-picker{
+    height: fit-content;
+}
+
+.color-picker > .title{
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
+.color-display{
+    box-sizing: border-box;
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    margin: 5% 0 15% 0;
+}
+
+.slide-container{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10% 0;
+    width: 100%;
+}
+
+.slider {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 1vh;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 1vh; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-left: -1px;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2vh; /* Set a specific slider handle width */
+    height: 2vh; /* Slider handle height */
+    background: #fffb00; /* Green background */
+    cursor: pointer; /* Cursor on hover */ 
+}
+
+.slider::-moz-range-thumb {
+    width: 2vh; /* Set a specific slider handle width */
+    height: 2vh; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#red-slider::-webkit-slider-thumb{
+    background: red;
+}
+
+#red-slider::-moz-range-thumb{
+    background: red;
+}
+
+#green-slider::-webkit-slider-thumb{
+    background: green;
+}
+
+#green-slider::-moz-range-thumb{
+    background: green;
+}
+
+#blue-slider::-webkit-slider-thumb{
+    background: blue;
+}
+
+#blue-slider::-moz-range-thumb{
+    background: blue;
+}
+
+.rainbow-button{
+    display: block;
+    font-family: inherit;
+    font-size: 1.7vh;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 1vh 0;
+    background-image: url("images/rainbow.jpg");
+    background-size: cover;
+    color: white;
+    border: 2px solid black;
+    transition: box-shadow 0.05s ease;
+    width: 100%;
+}
+
+.rainbow-button:active{
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 1) inset;
+}
+
+.clear-button{
+    display: block;
+    margin: 15% 0 0 0;
+    font-family: inherit;
+    font-size: 1.7vh;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 1vh 0;
+    background-color: white;
+    background-size: cover;
+    color: black;
+    border: 2px solid black;
+    transition: box-shadow 0.05s ease;
+    width: 100%;
+}
+
+.clear-button:active{
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 1) inset;
+}
+
+.size-picker{
+    width: 100%;
+    align-self: flex-end;
+}
+
+#size-slider{
+    margin-top: 1.2vh;
+}
+
+#size-slider::-webkit-slider-thumb{
+    background: black;
+}
+
+#size-slider::-moz-range-thumb{
+    background: black;
+}
+
+.drawing-container{
+    box-sizing: border-box;
+    background-color: blue;
+    width: 60vh;
+    height: 60vh;
+}

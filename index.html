@@ -7,8 +7,40 @@
     <title>Etch a sketch</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="content-wrapper">
+        <div class="title">Etch a sketch</div>
+        <div class="working-area">
+            <div class="menu">
+                <div class="color-picker">
+                    <div class="title">Pick a color</div>
+                    <div class="color-display"></div>
+                    <div class="slide-container">
+                        Red: 256<br><input type="range" min="0" max="256" value="0" class="slider" id="red-slider">
+                    </div>
+                    <div class="slide-container">
+                        Green: 256<br><input type="range" min="0" max="256" value="0" class="slider" id="green-slider">
+                    </div>
+                    <div class="slide-container">
+                        Blue: 256<br><input type="range" min="0" max="256" value="0" class="slider" id="blue-slider">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="rainbow-button">Rainbow Mode</button>
+                    <button class="clear-button">Clear</button>
+                </div>
+                <div class="size-picker">
+                    <div class="slide-container">
+                        Grid Size: 16x16<br><input type="range" min="0" max="100" value="16" class="slider" id="size-slider">
+                    </div>
+                </div>
+            </div>
+            <div class="drawing-container container"></div>
+        </div>
+    </div>
 </body>
 </html>
