@@ -21,6 +21,10 @@ p{
     margin: 0;
 }
 
+.content-wrapper{
+    margin-top: -10%;
+}
+
 .content-wrapper > .title{
     font-size: 8vh;
     font-weight: 500;
