@@ -20,6 +20,7 @@ console.log(colorDisplay);
 let gridSize = 16;
 let color = [0, 0, 0];
 let rainbowMode = false;
+let mouseDown = false;
 
 function turnOffRainbow(){
     rainbowMode = false;
@@ -31,6 +32,14 @@ function clearGrid(){
     drawingContainer.innerHTML = '';
 }
 
+function colorize(pixel){
+    if (rainbowMode) {
+        pixel.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
+    } else {
+        pixel.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+    }
+}
+
 function createGrid(){
     const qridSizeSquared = gridSize*gridSize;
     drawingContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
@@ -40,9 +49,10 @@ function createGrid(){
         pixel.classList.add("pixel");
 
         pixel.addEventListener("mouseover", (event) => {
+            if (mouseDown) {colorize(pixel);}
             pixel.style.opacity = "0.5";
-            console.log(event);
         })
+        pixel.addEventListener("mousedown", (event) => {colorize(pixel)})
         pixel.addEventListener("mouseout", (event) => {pixel.style.opacity = "1";})
 
         drawingContainer.appendChild(pixel);
@@ -96,6 +106,8 @@ function setup(){
         rainbowButton.classList.toggle("button-active");
     }
 
+    document.querySelector("body").addEventListener("mousedown", (event) => {mouseDown = true; console.log(event)})
+    document.querySelector("body").addEventListener("mouseup", (event) => {mouseDown = false;})
     createGrid();
 }
 
